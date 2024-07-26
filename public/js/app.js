@@ -98,7 +98,29 @@
         console.table(database);
     }
     // signUp()
-
+    const login =()=>{
+        do {
+            logemail = prompt("enter your email to log")
+         if (logemail!=email) {
+            console.log("email is not found");
+         }else if(logemail==email){
+            console.log("welcome ");
+            
+            do {
+                logpassword = prompt("enter password")
+            if (logpassword!=password) {
+                console.log("password inccorect ");
+            }else if (logpassword==password) {
+                
+                console.log("ur login sucss sefuly");
+                break;
+            }
+            } while (true);
+            break
+         }
+            
+         } while (true);
+    }
 
 
 
