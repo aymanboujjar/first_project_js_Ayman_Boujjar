@@ -160,4 +160,24 @@
        
     mainMenu();
 
-    
+    class bankaccount extends User{
+        constructor(name,balence){
+            super(name)
+            this.balence=balence
+        }
+        logOut(){
+
+        }
+        windraw(){
+
+        }
+        deposit(){
+
+        }
+        loan(){
+
+        }
+        invest(){
+
+        }
+    }
