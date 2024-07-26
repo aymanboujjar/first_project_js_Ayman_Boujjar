@@ -122,7 +122,16 @@
          } while (true);
     }
 
-
+    const changePassword=()=>{
+        exemail=prompt("enter ur exesting email ")
+        if (exemail==email) {
+           let newpass=prompt("enter your new password")
+           let o=database.find(e=>e.email==exemail)
+           o.password=newpass
+            console.table(database);
+            
+        }        
+    }
 
 
 
