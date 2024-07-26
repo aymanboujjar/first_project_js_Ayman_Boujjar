@@ -181,3 +181,24 @@
 
         }
     }
+    const afterlog = () => {
+        do {
+            
+            const choice = prompt("Choose an option: 1. logout 2. windraw 3. deposit 4.loan ").toLowerCase();
+    
+            if (choice === '1' || choice === 'logout') {
+                console.log("ml");
+            } else if (choice === '2' || choice === 'windraw') {
+                console.log("ml");
+                
+            } else if (choice === '3' || choice === 'deposit') {
+                console.log("ml");
+            } else if (choice === '4' || choice === 'loan') {
+                console.log("ml");
+            }else if (choice === '5' || choice === 'invest') {
+                console.log("ml");
+            } else {
+                console.log("Invalid choice. Please try again.");
+            }
+        } while (true);        
+    }
