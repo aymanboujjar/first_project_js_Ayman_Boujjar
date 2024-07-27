@@ -17,6 +17,8 @@
             super(name)
             this.balence=balence
             this.loan = 0;
+            this.loanTaken = 0; 
+            this.loanRepaid = 0;
         }
         logOut(){
             console.log("uv been log out from your account ");
@@ -41,12 +43,12 @@
                 console.log("maymkanch");
             }
         }
-        loan(){
-           
+        takeLoan() {
+            console.log("br");
         }
-       
+        
         invest(){
-            console.log("bb");
+            console.log("br");
         }
     }
 
@@ -205,6 +207,7 @@
             useracc= new bankaccount(names,2000)
             if (choice === '1' || choice === 'logout') {
                useracc.logOut()
+               return
             } else if (choice === '2' || choice === 'windraw') {
                 taman=parseInt(prompt("ch7al baghi tiri dyal flous")) 
                 useracc.windraw(taman)
@@ -213,7 +216,7 @@
                 money = parseInt(prompt("ch7al dyal flous baghi t7at  ")) 
                 useracc.deposit(money)
             } else if (choice === '4' || choice === 'loan') {
-               
+                console.log("ml");
             }else if (choice === '5' || choice === 'invest') {
                 console.log("ml");
             } else {
