@@ -175,7 +175,28 @@
 
 
     
-   
+    const mainMenu = () => {
+        do {
+            
+            const choice = prompt("Choose an option: 1. Sign Up 2. Log In 3. deposit Type 'exit' to exit").toLowerCase();
+    
+            if (choice === '1' || choice === 'sign up') {
+                signUp();
+            } else if (choice === '2' || choice === 'log in') {
+                login()
+                afterlog()
+
+                
+            } else if (choice === '3' || choice === 'change password') {
+                changePassword()
+            } else if (choice === 'exit') {
+                console.log("Exiting...");
+                return
+            } else {
+                console.log("Invalid choice. Please try again.");
+            }
+        } while (true);        
+    } 
     
 
    
