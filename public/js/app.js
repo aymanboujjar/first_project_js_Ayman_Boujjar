@@ -12,7 +12,43 @@
         }
     }
 
-
+    class bankaccount extends User{
+        constructor(name,balence){
+            super(name)
+            this.balence=balence
+            this.loan = 0;
+        }
+        logOut(){
+            console.log("uv been log out from your account ");
+            return
+        }
+        windraw(taman){
+             
+            if (taman<this.balence) {
+                this.balence-=taman
+                console.log(`bqat 3andk f compte ${this.balence}`);
+                console.log(`rak tiriti ${taman } `);
+            }else{
+                console.log("sold makaynch");
+            }
+        }
+        deposit(money){
+            if (this.balence && money<=1000) {
+                this.balence+=money
+                console.log(`rak 7atiti ${money} f compte dyalk`);
+                console.log(`compte dyalk wala fih ${this.balence}`);
+            }else{
+                console.log("maymkanch");
+            }
+        }
+        loan(){
+           
+        }
+       
+        invest(){
+            console.log("bb");
+        }
+    }
 
 
 
@@ -116,6 +152,7 @@
                 break;
             }
             } while (true);
+            
             break
          }
             
@@ -145,6 +182,8 @@
                     signUp();
                 } else if (choice === '2' || choice === 'log in') {
                     login()
+                    afterlog()
+
                     
                 } else if (choice === '3' || choice === 'change password') {
                     changePassword()
@@ -157,44 +196,24 @@
             } while (true);        
         }
     
-       
-    mainMenu();
 
-    class bankaccount extends User{
-        constructor(name,balence){
-            super(name)
-            this.balence=balence
-        }
-        logOut(){
-
-        }
-        windraw(){
-
-        }
-        deposit(){
-
-        }
-        loan(){
-
-        }
-        invest(){
-
-        }
-    }
+   
     const afterlog = () => {
         do {
             
             const choice = prompt("Choose an option: 1. logout 2. windraw 3. deposit 4.loan ").toLowerCase();
-    
+            useracc= new bankaccount(names,2000)
             if (choice === '1' || choice === 'logout') {
-                console.log("ml");
+               useracc.logOut()
             } else if (choice === '2' || choice === 'windraw') {
-                console.log("ml");
+                taman=parseInt(prompt("ch7al baghi tiri dyal flous")) 
+                useracc.windraw(taman)
                 
             } else if (choice === '3' || choice === 'deposit') {
-                console.log("ml");
+                money = parseInt(prompt("ch7al dyal flous baghi t7at  ")) 
+                useracc.deposit(money)
             } else if (choice === '4' || choice === 'loan') {
-                console.log("ml");
+               
             }else if (choice === '5' || choice === 'invest') {
                 console.log("ml");
             } else {
@@ -202,3 +221,4 @@
             }
         } while (true);        
     }
+mainMenu();
